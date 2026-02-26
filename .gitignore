@@ -1,0 +1,6 @@
+venv/
+*.duckdb
+__pycache__/
+.DS_Store
+phase1_data/telco_churn_enriched.csv
+phase1_data/modeling_dataset.csv
