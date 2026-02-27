@@ -1,0 +1,7 @@
+demographic,group,n_customers,pct_persuadable,pct_sleeping_dog,mean_uplift,mean_clv,total_value_at_risk
+gender,Male,3556,31.4,55.3,-0.0177,1371.45,-209525.33
+gender,Female,3487,31.7,53.2,-0.0114,1365.82,-133251.49
+senior_label,Non-Senior,5893,31.8,54.0,-0.0142,1365.43,-285110.53
+senior_label,Senior,1150,30.1,55.2,-0.0165,1385.23,-57666.29
+partner,Yes,3346,33.9,50.9,-0.0035,1362.79,-118692.84
+partner,No,3697,29.4,57.2,-0.0246,1373.98,-224083.98
