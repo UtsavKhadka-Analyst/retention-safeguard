@@ -1,0 +1,44 @@
+# =============================================================================
+# docker-compose.yml — One-command deployment
+# =============================================================================
+# USAGE:
+#   docker-compose up          → Starts both API and Dashboard
+#   docker-compose up -d       → Starts in background
+#   docker-compose down        → Stops everything
+#
+# THEN VISIT:
+#   http://localhost:8000/docs  → FastAPI Swagger UI
+#   http://localhost:8501       → Streamlit Dashboard
+# =============================================================================
+
+version: "3.8"
+
+services:
+  # ── FastAPI Backend ──
+  api:
+    build: .
+    container_name: retention-api
+    command: uvicorn phase3_api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./phase2_modeling/artifacts:/app/phase2_modeling/artifacts:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── Streamlit Dashboard ──
+  dashboard:
+    build: .
+    container_name: retention-dashboard
+    command: streamlit run phase4_dashboard/app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./phase2_modeling/artifacts:/app/phase2_modeling/artifacts:ro
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://api:8000
