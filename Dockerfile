@@ -8,20 +8,14 @@
 # RUN:    docker run -p 8000:8000 -p 8501:8501 retention-safeguard
 # =============================================================================
 
-FROM python:3.11-slim
-
-# Set working directory
+FROM python:3.12-slim
 WORKDIR /app
-
-# Install dependencies first (cached layer)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy project files
 COPY . .
-
-# Expose ports: 8000 (FastAPI) + 8501 (Streamlit)
+RUN python phase1_data/fetch_and_enrich_data.py && \
+    python phase1_data/load_to_db.py && \
+    python phase1_data/sql_queries.py && \
+    python phase2_modeling/t_learner.py
 EXPOSE 8000 8501
-
-# Default: start the API
 CMD ["uvicorn", "phase3_api.main:app", "--host", "0.0.0.0", "--port", "8000"]

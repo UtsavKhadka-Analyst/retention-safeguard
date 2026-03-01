@@ -52,7 +52,7 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, "phase3_api"))
 # ─────────────────────────────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────
-API_URL = "http://localhost:8000"
+API_URL = os.environ.get("API_URL", "http://localhost:8000")
 ARTIFACTS_DIR = os.path.join(PROJECT_ROOT, "phase2_modeling", "artifacts")
 SCORED_DATA_PATH = os.path.join(ARTIFACTS_DIR, "scored_customers.csv")
 
