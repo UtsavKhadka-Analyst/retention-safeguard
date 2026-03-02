@@ -42,12 +42,7 @@ THE FOUR QUADRANTS:
     4. SLEEPING DOGS (τ << 0): Would stay WITHOUT offer, churn WITH offer
        → NEVER contact them. The offer annoys them and causes churn.
 
-INTERVIEW PREP:
-    Q: "What are the limitations of a T-Learner?"
-    A: "It trains on subsets (only treated or only control), which
-       reduces effective sample size. It also doesn't share information
-       between the two models. The X-Learner addresses both issues
-       by using cross-imputation of treatment effects."
+
 =============================================================================
 """
 

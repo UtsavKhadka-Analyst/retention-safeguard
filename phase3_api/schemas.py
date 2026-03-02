@@ -23,12 +23,7 @@ BUSINESS CONTEXT:
     - Quadrant classification (Persuadable, Sure Thing, etc.)
     - Dollar value at risk
 
-INTERVIEW PREP:
-    Q: "Why did you use Pydantic instead of raw dictionaries?"
-    A: "Pydantic enforces a schema contract. If the CRM sends malformed
-       data, the API returns a clear validation error instead of silently
-       producing garbage predictions. This is critical in production
-       where bad inputs cause bad business decisions."
+
 =============================================================================
 """
 

@@ -20,13 +20,6 @@ DESIGN PATTERN — SINGLETON MODEL LOADER:
     3. Runs inference and computes uplift scores
     4. Classifies into quadrants and generates recommendations
 
-INTERVIEW PREP:
-    Q: "How do you serve ML models in production?"
-    A: "I separate model loading from inference. Models are loaded once
-       at startup and cached in memory. Each request only runs the
-       feature transformation and predict calls, keeping latency low.
-       For higher scale, I'd use model servers like TorchServe or
-       Triton, but for this throughput, in-process serving is sufficient."
 =============================================================================
 """
 

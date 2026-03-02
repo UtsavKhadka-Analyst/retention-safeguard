@@ -35,12 +35,6 @@ PRODUCTION CONSIDERATIONS (for interviews):
     - For model updates: implement blue-green deployment so you can
       swap models without downtime.
 
-INTERVIEW PREP:
-    Q: "How would you deploy this model in production?"
-    A: "Containerize with Docker, deploy on Kubernetes or AWS ECS,
-       put behind an API gateway for auth and rate limiting,
-       add monitoring for prediction latency and feature drift,
-       and implement A/B testing for model version comparison."
 =============================================================================
 """
 

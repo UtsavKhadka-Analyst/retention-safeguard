@@ -31,12 +31,7 @@ SCHEMA DESIGN:
     marketing        → Treatment assignment and propensity scores
     churn_labels     → Outcome variable (kept separate for clean modeling)
 
-INTERVIEW PREP:
-    Q: "Why did you normalize the data into multiple tables?"
-    A: "In production, customer data lives across multiple systems —
-       CRM, billing, marketing automation. My SQL queries demonstrate
-       I can work with data as it actually exists in companies,
-       not just pre-joined flat files."
+
 =============================================================================
 """
 

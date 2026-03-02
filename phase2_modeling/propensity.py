@@ -30,17 +30,7 @@ WHY IPW?
         This up-weights "surprising" observations and down-weights
         "expected" observations, balancing the groups.
 
-INTERVIEW PREP:
-    Q: "What are the assumptions required for IPW to work?"
-    A: "Three assumptions: (1) Positivity — every unit has some probability
-       of being treated (0 < e(x) < 1). (2) Unconfoundedness — no hidden
-       confounders after conditioning on X. (3) Correct specification of
-       the propensity model. Violation of any of these invalidates IPW."
 
-    Q: "What happens with extreme propensity scores?"
-    A: "Scores near 0 or 1 create extreme weights, inflating variance.
-       We clip (trim) propensity scores to [0.05, 0.95] to stabilize
-       estimates. This is called weight trimming or truncation."
 =============================================================================
 """
 

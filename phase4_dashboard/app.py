@@ -22,16 +22,7 @@ DESIGN PHILOSOPHY:
     - The dashboard makes DECISIONS easier, not just displays data
     - No jargon: "Persuadable customers" not "positive CATE segment"
 
-HOW TO RUN:
-    Terminal 1: cd phase3_api && uvicorn main:app --port 8000
-    Terminal 2: cd phase4_dashboard && streamlit run app.py
 
-INTERVIEW PREP:
-    Q: "Why did you build a dashboard instead of just a notebook?"
-    A: "Because the end user is a marketing manager, not a data scientist.
-       A notebook requires Python knowledge. A dashboard requires a browser.
-       The goal of data science is to enable decisions, and decisions
-       happen in dashboards, not in Jupyter."
 =============================================================================
 """
 

@@ -33,12 +33,7 @@ WHY NOT AUC?
        Shows cumulative difference in outcomes between treatment and
        control as you move through uplift-ranked customers.
 
-INTERVIEW PREP:
-    Q: "How do you evaluate an uplift model?"
-    A: "Not with AUC — that measures prediction, not causal effect.
-       I use Qini curves to visualize targeting efficiency, Qini
-       coefficient as a single-number summary, and uplift@k to answer
-       'how much effect do we capture by targeting the top k%?'"
+
 =============================================================================
 """
 

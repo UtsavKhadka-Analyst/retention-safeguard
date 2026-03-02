@@ -36,12 +36,6 @@ METRICS WE USE:
        Is each group represented in the Persuadable segment proportionally
        to their representation in the overall population?
 
-INTERVIEW PREP:
-    Q: "What fairness considerations apply to your uplift model?"
-    A: "If the model disproportionately classifies one demographic as
-       Persuadable, marketing resources flow unequally. I check
-       demographic parity across uplift quadrants and flag any segments
-       where representation deviates by more than 10 percentage points."
 =============================================================================
 """
 

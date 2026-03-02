@@ -30,11 +30,6 @@ IMPORTANT DESIGN DECISION — NON-RANDOM TREATMENT ASSIGNMENT:
     (IPW, T-Learner, X-Learner) have a real problem to solve.
     If treatment were random, you wouldn't need causal inference at all.
 
-INTERVIEW PREP:
-    Q: "Why didn't you assign treatment randomly?"
-    A: "Because random assignment would make causal correction unnecessary.
-       I intentionally introduced selection bias to demonstrate that I
-       understand WHY methods like IPW exist, not just how to code them."
 =============================================================================
 """
 

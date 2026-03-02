@@ -48,12 +48,6 @@ HOW THE X-LEARNER IMPROVES ON THE T-LEARNER:
         3. Propensity-weighted combination handles imbalanced groups
         4. Particularly effective when treatment group is small
 
-INTERVIEW PREP:
-    Q: "When would you use X-Learner over T-Learner?"
-    A: "When treatment and control groups are very imbalanced in size.
-       The X-Learner uses cross-imputation so both models benefit from
-       the full dataset. It also uses the propensity score to optimally
-       weight the two effect estimators."
 =============================================================================
 """
 
